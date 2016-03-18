@@ -47,6 +47,7 @@
 		A216DB2F1C9BB169008A2582 /* Tarea04VelocimetroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tarea04VelocimetroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A216DB331C9BB169008A2582 /* Tarea04VelocimetroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarea04VelocimetroUITests.swift; sourceTree = "<group>"; };
 		A216DB351C9BB169008A2582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A216DB411C9BB363008A2582 /* Tarea 2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Tarea 2.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 			children = (
 				A216DB131C9BB169008A2582 /* AppDelegate.swift */,
 				A216DB151C9BB169008A2582 /* ViewController.swift */,
+				A216DB411C9BB363008A2582 /* Tarea 2.playground */,
 				A216DB171C9BB169008A2582 /* Main.storyboard */,
 				A216DB1A1C9BB169008A2582 /* Assets.xcassets */,
 				A216DB1C1C9BB169008A2582 /* LaunchScreen.storyboard */,

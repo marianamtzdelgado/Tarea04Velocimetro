@@ -1,25 +1,55 @@
-//
-//  ViewController.swift
-//  Tarea04Velocimetro
-//
-//  Created by Mariana Martínez Delgado on 17/03/16.
-//  Copyright © 2016 MMD. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+enum Velocidades : Int{
+    case Apagado = 0, VelocidadBaja = 20, VelocidadMedia = 50, VelocidadAlta = 120
+    
+    init(velocidadInicial : Velocidades){
+        self = velocidadInicial
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
+class Auto {
+    
+    var velocidad : Velocidades
+    var velocidadInicial : Int
+    
+    init(){
+        velocidad = .Apagado
+        velocidadInicial = velocidad.rawValue
+    }
+    
+    func cambioDeVelocidad() -> (actual : Int, velocidadEnCadena : String){
+        
+        velocidadInicial = velocidad.rawValue
+        var leyenda : String
+        
+        switch velocidad{
+        case .Apagado:
+            velocidad = .VelocidadBaja
+            leyenda = "Apagado"
+            
+        case .VelocidadBaja:
+            velocidad = .VelocidadMedia
+            leyenda  = "Velocidad Baja"
+            
+        case .VelocidadMedia:
+            velocidad = .VelocidadAlta
+            leyenda = "Velocidad Media"
+            
+        case .VelocidadAlta:
+            velocidad = .VelocidadMedia
+            leyenda = "Velocidad Alta"
+        }
+        
+        return (velocidadInicial, leyenda)
+    }
+}
+
+
+var auto = Auto()
+var resultado : (actual : Int, velocidadEnCadena : String)
+
+for num in 1...20{
+    resultado = auto.cambioDeVelocidad()
+    print("\(num). \(resultado.actual), \(resultado.velocidadEnCadena)")
+}
